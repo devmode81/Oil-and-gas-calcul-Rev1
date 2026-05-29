@@ -26,4 +26,8 @@ describe("pressureDrop", () => {
   it("throws on an unsupported method", () => {
     expect(() => pressureDrop.run({ inputs: baseInputs, method: "Bogus" })).toThrow();
   });
+
+  it("throws a 'not yet implemented' error for Hazen-Williams", () => {
+    expect(() => pressureDrop.run({ inputs: baseInputs, method: "Hazen-Williams" })).toThrow(/not yet implemented/);
+  });
 });

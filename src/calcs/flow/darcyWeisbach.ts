@@ -1,7 +1,8 @@
 import type { Calc, CalcInput, CalcResult } from "../../core/types";
 import { convert } from "../../units/convert";
 
-const SUPPORTED = ["Darcy-Weisbach", "Hazen-Williams"];
+const IMPLEMENTED = ["Darcy-Weisbach"];
+const KNOWN = ["Darcy-Weisbach", "Hazen-Williams"];
 
 export const pressureDrop: Calc = {
   id: "pressureDrop",
@@ -15,12 +16,11 @@ export const pressureDrop: Calc = {
   ],
   run(input: CalcInput): CalcResult {
     const method = input.method ?? "Darcy-Weisbach";
-    if (!SUPPORTED.includes(method)) {
-      throw new Error(`Unsupported method "${method}". Supported: ${SUPPORTED.join(", ")}`);
+    if (!KNOWN.includes(method)) {
+      throw new Error(`Unsupported method "${method}". Known methods: ${KNOWN.join(", ")}`);
     }
-    if (method !== "Darcy-Weisbach") {
-      // Hazen-Williams requires a C-factor input set; not part of this slice.
-      throw new Error(`Method "${method}" not implemented in this build.`);
+    if (!IMPLEMENTED.includes(method)) {
+      throw new Error(`Method "${method}" is a known alternative but not yet implemented in this build.`);
     }
     const f = input.inputs.frictionFactor.value;
     const L = convert(input.inputs.length.value, input.inputs.length.unit, "m");

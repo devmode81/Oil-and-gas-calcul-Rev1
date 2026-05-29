@@ -22,7 +22,6 @@ export const cylinderVolume: Calc = {
         { label: "Apply formula", expression: `V = π·(${r} m)²·(${L} m)`, result: { value: V, unit: "m^3" } },
       ],
       method: "Right-circular cylinder",
-      reference: undefined,
       trustTier: "computed",
       flags: [],
     };
