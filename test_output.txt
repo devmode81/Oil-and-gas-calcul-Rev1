@@ -1,0 +1,27 @@
+
+> @oilgas/core@0.0.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /Users/albert/Claude Projects/oilgas-calc-app
+
+ ✓ tests/calcs/colebrook.test.ts (3 tests) 3ms
+ ✓ tests/core/assumptions.test.ts (3 tests) 1ms
+ ✓ tests/format/sigfig.test.ts (6 tests) 2ms
+ ✓ tests/calcs/pumpPower.test.ts (3 tests) 5ms
+ ✓ tests/calcs/barlow.test.ts (2 tests) 9ms
+ ✓ tests/calcs/darcyWeisbach.test.ts (4 tests) 13ms
+ ✓ tests/calcs/transitTime.test.ts (2 tests) 3ms
+ ✓ tests/calcs/reynolds.test.ts (2 tests) 18ms
+ ✓ tests/calcs/npsh.test.ts (2 tests) 2ms
+ ✓ tests/calcs/cylinderVolume.test.ts (1 test) 2ms
+ ✓ tests/calcs/apiGravity.test.ts (3 tests) 2ms
+ ✓ tests/units/convert.test.ts (4 tests) 2ms
+ ✓ tests/calcs/lineVelocity.test.ts (2 tests) 5ms
+ ✓ tests/core/sanity.test.ts (2 tests) 2ms
+
+ Test Files  14 passed (14)
+      Tests  39 passed (39)
+   Start at  21:09:55
+   Duration  1.54s (transform 184ms, setup 0ms, collect 8.48s, tests 70ms, environment 1ms, prepare 749ms)
+
