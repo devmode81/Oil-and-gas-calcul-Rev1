@@ -23,3 +23,5 @@ math.createUnit("cP", "0.001 Pa s");
 math.createUnit("ppg", "1 lbm/gal");
 // Common flow-rate shorthands (depend on bbl above).
 math.createUnit("bopd", "1 bbl/day", { aliases: ["bwpd", "blpd"] });
+// US gallons per minute (drilling / pump flow rates).
+math.createUnit("gpm", "1 gal/min");
