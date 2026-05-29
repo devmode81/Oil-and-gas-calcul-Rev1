@@ -17,4 +17,16 @@ describe("toSigFigs", () => {
   it("handles large numbers", () => {
     expect(toSigFigs(200000, 3)).toBe("200000");
   });
+
+  it("never returns exponential notation for small magnitudes", () => {
+    const result = toSigFigs(0.00001234);
+    expect(result).toBe("0.00001234");
+    expect(result).not.toMatch(/[eE]/);
+  });
+
+  it("small magnitude with explicit sig figs never returns exponential", () => {
+    const result = toSigFigs(0.000012345, 3);
+    expect(result).toBe("0.0000123");
+    expect(result).not.toMatch(/[eE]/);
+  });
 });
