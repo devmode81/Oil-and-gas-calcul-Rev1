@@ -58,6 +58,16 @@ export { vogelIpr } from "./calcs/reservoir/vogelIpr";
 export { productivityIndex } from "./calcs/reservoir/productivityIndex";
 export { arpsDecline } from "./calcs/reservoir/arpsDecline";
 
+// Mechanical / rotating calcs (batch 5)
+export { compressorPolytropicPower } from "./calcs/mechanical/compressorPolytropicPower";
+export { pumpAffinityLaws } from "./calcs/mechanical/pumpAffinityLaws";
+export { heatExchangerDuty } from "./calcs/mechanical/heatExchangerDuty";
+export { lmtd } from "./calcs/mechanical/lmtd";
+export { heatExchangerArea } from "./calcs/mechanical/heatExchangerArea";
+export { asmeViiThickness } from "./calcs/mechanical/asmeViiThickness";
+export { pipeStress } from "./calcs/mechanical/pipeStress";
+export { fanBlowerPower } from "./calcs/mechanical/fanBlowerPower";
+
 // Subsea / flow-assurance calcs
 export { pipelinePressureDrop } from "./calcs/subsea/pipelinePressureDrop";
 export { hydrateMargin } from "./calcs/subsea/hydrateMargin";
@@ -100,6 +110,14 @@ import { darcyRadialInflow } from "./calcs/reservoir/darcyRadialInflow";
 import { vogelIpr } from "./calcs/reservoir/vogelIpr";
 import { productivityIndex } from "./calcs/reservoir/productivityIndex";
 import { arpsDecline } from "./calcs/reservoir/arpsDecline";
+import { compressorPolytropicPower } from "./calcs/mechanical/compressorPolytropicPower";
+import { pumpAffinityLaws } from "./calcs/mechanical/pumpAffinityLaws";
+import { heatExchangerDuty } from "./calcs/mechanical/heatExchangerDuty";
+import { lmtd } from "./calcs/mechanical/lmtd";
+import { heatExchangerArea } from "./calcs/mechanical/heatExchangerArea";
+import { asmeViiThickness } from "./calcs/mechanical/asmeViiThickness";
+import { pipeStress } from "./calcs/mechanical/pipeStress";
+import { fanBlowerPower } from "./calcs/mechanical/fanBlowerPower";
 import { pipelinePressureDrop } from "./calcs/subsea/pipelinePressureDrop";
 import { hydrateMargin } from "./calcs/subsea/hydrateMargin";
 import { hammerschmidtInhibitorDose } from "./calcs/subsea/hammerschmidtInhibitorDose";
@@ -150,4 +168,12 @@ export const CALC_REGISTRY: Record<string, Calc> = {
   [jouleThomsonCooling.id]: jouleThomsonCooling,
   [collapsePressure.id]: collapsePressure,
   [liquidHoldup.id]: liquidHoldup,
+  [compressorPolytropicPower.id]: compressorPolytropicPower,
+  [pumpAffinityLaws.id]: pumpAffinityLaws,
+  [heatExchangerDuty.id]: heatExchangerDuty,
+  [lmtd.id]: lmtd,
+  [heatExchangerArea.id]: heatExchangerArea,
+  [asmeViiThickness.id]: asmeViiThickness,
+  [pipeStress.id]: pipeStress,
+  [fanBlowerPower.id]: fanBlowerPower,
 };
