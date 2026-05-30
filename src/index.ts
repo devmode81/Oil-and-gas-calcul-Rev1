@@ -47,6 +47,17 @@ export { killMudWeight } from "./calcs/drilling/killMudWeight";
 export { buoyancyFactor } from "./calcs/drilling/buoyancyFactor";
 export { pumpOutput } from "./calcs/drilling/pumpOutput";
 
+// Reservoir calcs
+export { stoiipVolumetric } from "./calcs/reservoir/stoiipVolumetric";
+export { ogipVolumetric } from "./calcs/reservoir/ogipVolumetric";
+export { gasFvf } from "./calcs/reservoir/gasFvf";
+export { oilFvfStanding } from "./calcs/reservoir/oilFvfStanding";
+export { solutionGorStanding } from "./calcs/reservoir/solutionGorStanding";
+export { darcyRadialInflow } from "./calcs/reservoir/darcyRadialInflow";
+export { vogelIpr } from "./calcs/reservoir/vogelIpr";
+export { productivityIndex } from "./calcs/reservoir/productivityIndex";
+export { arpsDecline } from "./calcs/reservoir/arpsDecline";
+
 // A registry of the calcs available in this build (used by later sub-projects).
 import { cylinderVolume } from "./calcs/geometry/cylinderVolume";
 import { reynolds } from "./calcs/fluids/reynolds";
@@ -70,6 +81,15 @@ import { bitNozzleVelocity } from "./calcs/drilling/bitNozzleVelocity";
 import { killMudWeight } from "./calcs/drilling/killMudWeight";
 import { buoyancyFactor } from "./calcs/drilling/buoyancyFactor";
 import { pumpOutput } from "./calcs/drilling/pumpOutput";
+import { stoiipVolumetric } from "./calcs/reservoir/stoiipVolumetric";
+import { ogipVolumetric } from "./calcs/reservoir/ogipVolumetric";
+import { gasFvf } from "./calcs/reservoir/gasFvf";
+import { oilFvfStanding } from "./calcs/reservoir/oilFvfStanding";
+import { solutionGorStanding } from "./calcs/reservoir/solutionGorStanding";
+import { darcyRadialInflow } from "./calcs/reservoir/darcyRadialInflow";
+import { vogelIpr } from "./calcs/reservoir/vogelIpr";
+import { productivityIndex } from "./calcs/reservoir/productivityIndex";
+import { arpsDecline } from "./calcs/reservoir/arpsDecline";
 import type { Calc } from "./core/types";
 
 export const CALC_REGISTRY: Record<string, Calc> = {
@@ -95,4 +115,13 @@ export const CALC_REGISTRY: Record<string, Calc> = {
   [killMudWeight.id]: killMudWeight,
   [buoyancyFactor.id]: buoyancyFactor,
   [pumpOutput.id]: pumpOutput,
+  [stoiipVolumetric.id]: stoiipVolumetric,
+  [ogipVolumetric.id]: ogipVolumetric,
+  [gasFvf.id]: gasFvf,
+  [oilFvfStanding.id]: oilFvfStanding,
+  [solutionGorStanding.id]: solutionGorStanding,
+  [darcyRadialInflow.id]: darcyRadialInflow,
+  [vogelIpr.id]: vogelIpr,
+  [productivityIndex.id]: productivityIndex,
+  [arpsDecline.id]: arpsDecline,
 };
