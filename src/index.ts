@@ -58,6 +58,16 @@ export { vogelIpr } from "./calcs/reservoir/vogelIpr";
 export { productivityIndex } from "./calcs/reservoir/productivityIndex";
 export { arpsDecline } from "./calcs/reservoir/arpsDecline";
 
+// Subsea / flow-assurance calcs
+export { pipelinePressureDrop } from "./calcs/subsea/pipelinePressureDrop";
+export { hydrateMargin } from "./calcs/subsea/hydrateMargin";
+export { hammerschmidtInhibitorDose } from "./calcs/subsea/hammerschmidtInhibitorDose";
+export { insulationHeatLoss } from "./calcs/subsea/insulationHeatLoss";
+export { cooldownTime } from "./calcs/subsea/cooldownTime";
+export { jouleThomsonCooling } from "./calcs/subsea/jouleThomsonCooling";
+export { collapsePressure } from "./calcs/subsea/collapsePressure";
+export { liquidHoldup } from "./calcs/subsea/liquidHoldup";
+
 // A registry of the calcs available in this build (used by later sub-projects).
 import { cylinderVolume } from "./calcs/geometry/cylinderVolume";
 import { reynolds } from "./calcs/fluids/reynolds";
@@ -90,6 +100,14 @@ import { darcyRadialInflow } from "./calcs/reservoir/darcyRadialInflow";
 import { vogelIpr } from "./calcs/reservoir/vogelIpr";
 import { productivityIndex } from "./calcs/reservoir/productivityIndex";
 import { arpsDecline } from "./calcs/reservoir/arpsDecline";
+import { pipelinePressureDrop } from "./calcs/subsea/pipelinePressureDrop";
+import { hydrateMargin } from "./calcs/subsea/hydrateMargin";
+import { hammerschmidtInhibitorDose } from "./calcs/subsea/hammerschmidtInhibitorDose";
+import { insulationHeatLoss } from "./calcs/subsea/insulationHeatLoss";
+import { cooldownTime } from "./calcs/subsea/cooldownTime";
+import { jouleThomsonCooling } from "./calcs/subsea/jouleThomsonCooling";
+import { collapsePressure } from "./calcs/subsea/collapsePressure";
+import { liquidHoldup } from "./calcs/subsea/liquidHoldup";
 import type { Calc } from "./core/types";
 
 export const CALC_REGISTRY: Record<string, Calc> = {
@@ -124,4 +142,12 @@ export const CALC_REGISTRY: Record<string, Calc> = {
   [vogelIpr.id]: vogelIpr,
   [productivityIndex.id]: productivityIndex,
   [arpsDecline.id]: arpsDecline,
+  [pipelinePressureDrop.id]: pipelinePressureDrop,
+  [hydrateMargin.id]: hydrateMargin,
+  [hammerschmidtInhibitorDose.id]: hammerschmidtInhibitorDose,
+  [insulationHeatLoss.id]: insulationHeatLoss,
+  [cooldownTime.id]: cooldownTime,
+  [jouleThomsonCooling.id]: jouleThomsonCooling,
+  [collapsePressure.id]: collapsePressure,
+  [liquidHoldup.id]: liquidHoldup,
 };
