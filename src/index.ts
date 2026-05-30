@@ -78,6 +78,16 @@ export { jouleThomsonCooling } from "./calcs/subsea/jouleThomsonCooling";
 export { collapsePressure } from "./calcs/subsea/collapsePressure";
 export { liquidHoldup } from "./calcs/subsea/liquidHoldup";
 
+// Electrical calcs (batch 6)
+export { motorPowerCurrent } from "./calcs/electrical/motorPowerCurrent";
+export { cableVoltageDrop } from "./calcs/electrical/cableVoltageDrop";
+export { transformerKva } from "./calcs/electrical/transformerKva";
+export { powerFactorCorrection } from "./calcs/electrical/powerFactorCorrection";
+export { fullLoadCurrent } from "./calcs/electrical/fullLoadCurrent";
+export { cableAmpacityDerating } from "./calcs/electrical/cableAmpacityDerating";
+export { powerTriangle } from "./calcs/electrical/powerTriangle";
+export { generatorSizing } from "./calcs/electrical/generatorSizing";
+
 // A registry of the calcs available in this build (used by later sub-projects).
 import { cylinderVolume } from "./calcs/geometry/cylinderVolume";
 import { reynolds } from "./calcs/fluids/reynolds";
@@ -126,6 +136,14 @@ import { cooldownTime } from "./calcs/subsea/cooldownTime";
 import { jouleThomsonCooling } from "./calcs/subsea/jouleThomsonCooling";
 import { collapsePressure } from "./calcs/subsea/collapsePressure";
 import { liquidHoldup } from "./calcs/subsea/liquidHoldup";
+import { motorPowerCurrent } from "./calcs/electrical/motorPowerCurrent";
+import { cableVoltageDrop } from "./calcs/electrical/cableVoltageDrop";
+import { transformerKva } from "./calcs/electrical/transformerKva";
+import { powerFactorCorrection } from "./calcs/electrical/powerFactorCorrection";
+import { fullLoadCurrent } from "./calcs/electrical/fullLoadCurrent";
+import { cableAmpacityDerating } from "./calcs/electrical/cableAmpacityDerating";
+import { powerTriangle } from "./calcs/electrical/powerTriangle";
+import { generatorSizing } from "./calcs/electrical/generatorSizing";
 import type { Calc } from "./core/types";
 
 export const CALC_REGISTRY: Record<string, Calc> = {
@@ -176,4 +194,12 @@ export const CALC_REGISTRY: Record<string, Calc> = {
   [asmeViiThickness.id]: asmeViiThickness,
   [pipeStress.id]: pipeStress,
   [fanBlowerPower.id]: fanBlowerPower,
+  [motorPowerCurrent.id]: motorPowerCurrent,
+  [cableVoltageDrop.id]: cableVoltageDrop,
+  [transformerKva.id]: transformerKva,
+  [powerFactorCorrection.id]: powerFactorCorrection,
+  [fullLoadCurrent.id]: fullLoadCurrent,
+  [cableAmpacityDerating.id]: cableAmpacityDerating,
+  [powerTriangle.id]: powerTriangle,
+  [generatorSizing.id]: generatorSizing,
 };
