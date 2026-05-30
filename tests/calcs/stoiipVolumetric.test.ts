@@ -18,6 +18,19 @@ describe("stoiipVolumetric", () => {
     expect(res.result.value / 1e6).toBeCloseTo(28.3, 1);
   });
 
+  it("convert(): area in m^2 gives same result (500 acres = 2023428 m²)", () => {
+    const res = stoiipVolumetric.run({
+      inputs: {
+        area: { value: 2023428, unit: "m^2" }, // 500 acres expressed in m²
+        thickness: { value: 50, unit: "ft" },
+        porosity: { value: 0.25, unit: "" },
+        waterSaturation: { value: 0.30, unit: "" },
+        boi: { value: 1.2, unit: "rb/STB" },
+      },
+    });
+    expect(res.result.value / 1e6).toBeCloseTo(28.3, 1);
+  });
+
   it("throws on porosity out of range (>1)", () => {
     expect(() =>
       stoiipVolumetric.run({

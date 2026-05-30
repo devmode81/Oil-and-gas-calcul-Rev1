@@ -1,4 +1,5 @@
 import type { Calc, CalcInput, CalcResult } from "../../core/types";
+import { convert } from "../../units/convert";
 
 export const stoiipVolumetric: Calc = {
   id: "stoiipVolumetric",
@@ -11,9 +12,8 @@ export const stoiipVolumetric: Calc = {
     { name: "boi", exampleUnit: "rb/STB" },
   ],
   run(input: CalcInput): CalcResult {
-    // All inputs are already in field units (acre, ft, frac, rb/STB).
-    const A = input.inputs.area.value;
-    const h = input.inputs.thickness.value;
+    const A = convert(input.inputs.area.value, input.inputs.area.unit, "acre");
+    const h = convert(input.inputs.thickness.value, input.inputs.thickness.unit, "ft");
     const phi = input.inputs.porosity.value;
     const Sw = input.inputs.waterSaturation.value;
     const Boi = input.inputs.boi.value;

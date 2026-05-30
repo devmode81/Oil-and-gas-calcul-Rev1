@@ -10,10 +10,12 @@ export const productivityIndex: Calc = {
     { name: "flowingPressure", exampleUnit: "psi" },
   ],
   run(input: CalcInput): CalcResult {
-    const q = input.inputs.flowrate.value; // STB/d
+    // STB/d — dimensionless in this context; UI must pass in STB/d
+    const q = input.inputs.flowrate.value;
     const Pr = convert(input.inputs.reservoirPressure.value, input.inputs.reservoirPressure.unit, "psi");
     const Pwf = convert(input.inputs.flowingPressure.value, input.inputs.flowingPressure.unit, "psi");
 
+    if (q < 0) throw new Error("flowrate must be >= 0");
     if (!(Pr > Pwf)) throw new Error("reservoirPressure must be > flowingPressure");
 
     // J = q / (Pr − Pwf)   [STB/d/psi]
