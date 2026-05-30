@@ -25,3 +25,5 @@ math.createUnit("ppg", "1 lbm/gal");
 math.createUnit("bopd", "1 bbl/day", { aliases: ["bwpd", "blpd"] });
 // US gallons per minute (drilling / pump flow rates).
 math.createUnit("gpm", "1 gal/min");
+// Permeability — millidarcy (depends on darcy above).
+math.createUnit("md", "0.001 darcy");
